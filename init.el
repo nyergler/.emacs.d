@@ -179,6 +179,15 @@
 ;;; For `counsel-fzf` install [fzf](https://github.com/junegunn/fzf) and for
 ;;; `counsel-rg`  install [ripgrep](https://github.com/BurntSushi/ripgrep) (rg).
 
+;;; Projectile
+(use-package projectile
+  :ensure t
+  :init
+  (projectile-mode +1)
+  :bind (:map projectile-mode-map
+              ("s-p" . projectile-command-map)
+              ("C-c p" . projectile-command-map)))
+
 ;;; File explorer sidebar
 
 (use-package treemacs
