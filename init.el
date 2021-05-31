@@ -1009,6 +1009,12 @@ inserted between the braces between the braces."
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
+;;; Modeline
+(use-package all-the-icons)
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
+
 
 ;;; ### Easy switching between some fonts ###
 
