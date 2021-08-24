@@ -1035,6 +1035,10 @@ Argument FRAMES has the same meaning as for `set-frame-font'"
 (global-set-key (kbd "C-c F") #'my-set-frame-font)
 
 
+;;; ### Themes
+(use-package solarized-theme
+  :ensure t)
+
 ;;; ### Toggle between dark and light themes with a key ###
 
 ;;; Toggle between [my own dark and light
@@ -1049,7 +1053,7 @@ Argument FRAMES has the same meaning as for `set-frame-font'"
     (setq my-dark-theme 'lupan-dark
 	  my-light-theme 'lupan-light)
   (setq my-dark-theme 'apropospriate-dark
-	my-light-theme 'apropospriate-light))
+	my-light-theme 'solarized-light))
 
 (defun my-select-theme (theme)
   (mapc #'disable-theme custom-enabled-themes)
