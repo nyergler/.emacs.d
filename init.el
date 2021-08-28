@@ -188,6 +188,18 @@
               ("s-p" . projectile-command-map)
               ("C-c p" . projectile-command-map)))
 
+(use-package popwin
+  :ensure t)
+
+(use-package flycheck-projectile
+  :after popwin
+  :ensure t
+  :config
+  (add-to-list 'popwin:special-display-config
+               `(,flycheck-projectile-error-list-buffer
+                 :regexp nil :dedicated t :position bottom :stick t
+                 :noselect nil))
+  )
 ;;; File explorer sidebar
 
 (use-package treemacs
